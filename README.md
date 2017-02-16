@@ -3,6 +3,7 @@ Redimensionamento de Imagens com Azure Functions + Image Resizer e Blob Trigger
 
 project.json
 
+<pre>
 {
 	"frameworks": 
 	{
@@ -15,9 +16,11 @@ project.json
 		}
 	}
 }
+</pre>
 
 run.csx
 
+<pre>
 using ImageResizer;
 using ImageResizer.ExtensionMethods;
  
@@ -37,3 +40,4 @@ public static void Run(Stream myBlob,
     };
     ImageBuilder.Current.Build(new ImageJob(myBlob, outputBlob, instructions));
 }
+</pre>
